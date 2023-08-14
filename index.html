@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://kit.fontawesome.com/5b96faa110.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="depositphotos_77856488-stock-illustration-logo-c-monogram-modern-letter.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#">Portfolio</a></li> -->
+                    <li><a href="#Hobies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Pre-Final Year Student at NIT Bhopal</p>
+                <h2>Hi, I am Chaitanya Sharma <br> from Agra, Uttar Pradesh.</h2>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------ABOUT-------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="360_F_94882306_gdTjxS01ptuEjEy0GQVZAhZNjiWsMfpt.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae exercitationem reiciendis animi officia sint modi repellendus repudiandae quos! Quibusdam laudantium corporis veniam odio, saepe, molestias non fuga dolorem necessitatibus porro nihil accusamus quis ad.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development <br></span>HTML CSS </li>
+                            <li><span>Languages <br></span>C C++ DSA Python MS Office</li>
+                            <li><span>Version Control <br></span>Git Github</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Business Development Intern <br></span>Worked as an Intern at Athenasquare Pvt. Ltd.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>NIT Bhopal <br></span>Completing my BTech in Electrical Engineering (CGPA- 9.18)</li>
+                            <li><span>12th <br></span>Completed my 12th from Gayatri Public School (96.6%)</li>
+                            <li><span>10th <br></span>Completed my 10th from Gayatri Public School (96.8%)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------ABOUT ended---------------------------- -->
+<!-- -------------------------HOBIES------------------------ -->
+<div id="Hobies">
+    <div class="container">
+        <h2 class="sub-title">My Hobies</h2>
+        <div class="hobie-list">
+            <div id="cooking">
+                <h2>Cooking  <i class="fa-sharp fa-regular fa-cookie-bite"></i></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, nostrum!</p>
+            </div>
+            <div id="guitar">
+                <h2>Guitar <i class="fa-solid fa-guitar"></i></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, nostrum!</p>
+            </div>
+            <div id="music">
+               <h2>Music <i class="fa-solid fa-music"></i></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, nostrum!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------HOBBIES ENDED------------------------------ -->
+<!-- --------------------------------CONTACT------------------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h2 class="sub-title">Contact Me</h2>
+                <p> <i class="fa-regular fa-paper-plane"></i> &nbsp; schaiten421@gmail.com </p>
+                <p> <i class="fa-solid fa-square-phone"></i>&nbsp; +91 9897225339</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/eastern.waves?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/chaiten.02/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/chaitanya-sharma-3a283b223/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Chaitanya Sharma.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="xyz@mail.com" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; with Chaitanya_Sharma</p>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links")
+    var tabcontents=document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- <form name="submit-to-google-sheet">
+    <input name="email" type="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form> -->
+  
+  <!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEQPPXOJURASTVrQJf5IaUyM2wACKrYDs20uoBsMv8YtDmIgaaZ-cFheJu2Vw8oNewNw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },3000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script> -->
+</body>
+</html>
